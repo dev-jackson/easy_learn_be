@@ -1,8 +1,5 @@
-import traceback
-
-from app import db
-from easy_learn.users.models import User
-
+from . import User
+from easy_learn import db
 
 def create(user):
     try:
@@ -15,6 +12,10 @@ def create(user):
 
 def get_by_id(_id):
     return User.query.filter_by(_id=_id).first()
+
+
+def get_by_email(email):
+    return User.query.filter_by(email=email).first()
 
 
 def login(email, password):

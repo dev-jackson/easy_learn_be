@@ -1,10 +1,12 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from easy_learn.users.routers import user_routes
-from easy_learn.auth.routers import auth_routes
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
+
+
+from users import user_routes
+from auth import auth_routes
 
 # Add routes
 app.register_blueprint(user_routes, url_prefix='/user')

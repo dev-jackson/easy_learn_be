@@ -1,7 +1,6 @@
 import json
-from flask import Blueprint, request
-
-user_routes = Blueprint('users', __name__)
+from flask import request
+from . import user_routes
 
 
 @user_routes.route('/', methods=["GET"])

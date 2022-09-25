@@ -1,2 +1,5 @@
-Flask
+Flask~=2.2.2
 Flask-SQLAlchemy
+PyJWT~=2.4.0
+Werkzeug~=2.2.2
+python-dotenv
